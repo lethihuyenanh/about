@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+//==========================================================================
+//_form.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.p-form-step
+//-----------------------------------------------------------------
+.p-form-step {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 50px;
+  @include smMax {
+    font-size: 1.6rem;
+    margin: 0 0 20px;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: -3px 0;
+    overflow: hidden;
+    li {
+      position: relative;
+      padding: 0;
+      margin: 3px 3px 3px 0;
+      width: 100%;
+      
+      div {
+        position: relative;
+        padding: 0 .8em 0 1.6em;
+        background-color: #f2f3f6;
+        border-color: #f2f3f6;
+        display: block;
+        height: 60px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include smMax {
+          padding: 0 .2em 0 1em;
+          height: 50px;
+        }
+      }
+      &:after,
+      div:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        content: '';
+        height: 0;
+        width: 0;
+        border: 30px solid transparent;
+        border-right-width: 0;
+        border-left-width: 20px;
+        z-index: 2;
+        border-left-color: inherit;
+        @include smMax {
+          border-width: 25px;
+          border-right-width: 0;
+          border-left-width: 10px;
+        }
+      }
+      &:after {
+        z-index: 1;
+        transform: translateX(3px);
+        border-left-color: #fff;
+        margin: 0;
+      }
+      &:first-of-type {
+        div {
+          padding-left: 1.6em;
+          @include smMax {
+            padding-left: 1em;
+          }
+        }
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &.is-current {
+        div {
+          color: #fff;
+          background-color: $colorMain;
+          border-color: $colorMain;
+        }
+      }
+      &.is-finished {
+        div {
+          color: #fff;
+          background-color: #a1a1a1;
+          border-color: #a1a1a1;
+        }
+      }
+    }
+  }
+}
+
+.p-form-table {
+  border-top: 1px solid $colorBorder;
+  word-break: break-all;
+  font-size: 1.6rem;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $colorBorder;
+    @include mdMax {
+      display: block;
+    }
+  }
+  &__required {
+    display: inline-block;
+    width: 42px;
+    font-size: 1.4rem;
+    text-align: center;
+    background: $colorMain;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    background: #f2f3f6;
+    padding: 30px;
+    font-size: 1.6rem;
+    position: relative;
+    font-weight: bold;
+    @include mdMax {
+      width: auto;
+      padding: 20px 15px;
+      font-size: 1.7rem;
+    }
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 320px);
+    padding: 25px 30px;
+    @include mdMax {
+      width: auto;
+      padding: 25px 15px;
+    }
+    input {
+      max-width: 700px;
+    }
+    textarea {
+      max-width: 700px;
+      min-height: 170px;
+    }
+  }
+  &__body-inner {
+    width: 100%;
+  }
+  .is-error {
+    .c-form-input,
+    .c-form-radio span:before,
+    .c-form-checkbox span:before,
+    .c-form-select select,
+    .c-form-textarea {
+      background-color: #ffeeee;
+    }
+  }
+}
+
+.p-form-input-small {
+  max-width: 200px !important;
+}
+
+.p-form-name {
+  @include smMin {
+    display: flex;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    &:nth-child(n + 2) {
+      @include smMin {
+        margin-left: 7%;
+      }
+      @include smMax {
+        margin-top: 20px
+      }
+    }
+    span {
+      display: inline-block;
+      min-width: 45px;
+      padding-right: 5px;
+    }
+    input {
+      @include smMin {
+        max-width: 240px;
+      }
+    }
+  }
+}
+
+.p-form-postcode {
+  display: flex;
+  align-items: center;
+  @include smMax {
+    position: relative;
+    padding-bottom: 65px;
+  }
+  &__zip1 {
+    max-width: 100px !important;
+  }
+  &__zip2 {
+    max-width: 120px !important;
+  }
+  &__symbol {
+    display: inline-block;
+    min-width: 45px;
+    padding-right: 5px;
+    @include smMax {
+      min-width: 30px;
+    }
+  }
+  &__bar {
+    padding: 0 13px;
+    text-align: center;
+    min-width: 43px;
+    @include smMax {
+      padding: 0 10px;
+      min-width: 35px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    max-width: 140px;
+    min-width: 100px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+    margin-left: 20px;
+    background: $colorMain;
+    border-radius: 50px;
+    @include smMax {
+      max-width: 155px;
+      height: 45px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+    }
+  }
+}
+
+.p-form-address {
+  * + * {
+    margin-top: 10px;
+    @include smMax {
+       margin-top: 20px;
+    }
+  }
+  &__pref {
+    width: 240px;
+    @include smMax {
+      width: 210px;
+    }
+  }
+  &__txt {
+    font-size: 1.5rem;
+    @include smMax {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.p-form-list {
+  @include smMin {
+    display: flex;
+  }
+  li {
+    &:nth-child(n + 2) {
+      @include smMin {
+        margin-left: 50px;
+      }
+      @include smMax {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.p-form-privacy {
+  margin-top: 50px;
+  border: 1px solid $colorBorder;
+  padding: 30px;
+  text-align: center;
+  font-weight: 700;
+  @include smMax {
+    margin-top: 30px;
+    padding: 15px;
+  }
+  &__check {
+    font-size: 1.6rem;
+    @include smMax {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.p-form-btn {
+  @include smMin {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+  }
+  @include smMax {
+    max-width: 300px;
+    margin: 30px auto 0;
+  }
+  &__item {
+    width: 100%;
+    @include smMin {
+      width: 300px;
+    }
+    @include smMax {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &:nth-child(n + 2) {
+      @include smMin {
+        margin-right: 30px;
+      }
+      @include smMax {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__submit {
+    @include smMax {
+      max-width: 345px;
+      height: 55px;
+    }
+  }
+}
+
+.p-form-thanks {
+  text-align: center;
+  @include smMax {
+    text-align: left;
+  }
+  &__lead {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    @include smMax {
+      font-size: 2.6rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  &__notes {
+    margin-top: 20px;
+    @include smMax {
+      margin-top: 15px;
+    }
+  }
+}
+
+.p-form-error-txt {
+  color: #cc0000;
+  margin-top: 10px;
+  & + .p-form-error-txt {
+    margin-top: 0;
+  }
+}
+

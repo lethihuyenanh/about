@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+//==========================================================================
+//_modal.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-modal
+//-----------------------------------------------------------------
+.c-modal {
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  @include smMax {
+    padding: 0 3rem;
+    font-size: 1.4rem;
+  }
+  &__wrap {
+    display: table;
+    max-width: 1080px;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    @include smMax {
+      max-width: 900px;
+      padding: 30px 0;
+    }
+  }
+  &__inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__content {
+    position: relative;
+    background-color: #fff;
+    padding: 50px 50px;
+    max-width: 1080px;
+    border-radius: 20px;
+    @include smMax {
+      border-radius: 10px;
+      padding: 35px 2.5rem;
+    }
+    &Body {
+      overflow: hidden;
+    }
+  }
+  //===========================
+  &--sm {
+    .c-modal__wrap {
+      max-width: 570px;
+    }
+    .c-modal__content {
+      max-width: 570px;
+    }
+  }
+  &--md {
+    .c-modal__wrap {
+      max-width: 882px;
+    }
+    .c-modal__content {
+      max-width: 882px;
+    }
+  }
+  //===========================
+  &__close {
+    width: 58px;
+    height: 58px;
+    background: #8C8;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin-top: -27px;
+    margin-right: -27px;
+    @include smMax {
+      width: 4rem;
+      height: 4rem;
+      margin-top: -2rem;
+      margin-right: -2rem;
+    }
+    i {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      @include transition;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 4px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -2px 0 0 -12px;
+        @include smMax {
+          width: 19px;
+          height: 3px;
+          margin: -2px 0 0 -9px;
+        }
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+    @include hover {
+      i {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__bg {
+    width: calc(100% - 17px);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+

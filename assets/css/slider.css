@@ -1,0 +1,118 @@
+.carousel {
+  background: #FAFAFA;
+  margin-bottom: 40px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.carousel-nav .carousel-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}
+
+/* flickity-fade */
+.carousel-main .flickity-slider {
+  -webkit-transform: translate(0, 0) !important;
+          transform: translate(0, 0) !important;
+}
+.carousel-main .flickity-slider .carousel-cell {
+  z-index: 0;
+  left: 0 !important;
+  opacity: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+.carousel-main .flickity-slider .carousel-cell.is-selected {
+  background: #ED2;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/* swiper-fade */
+.carousel-main .swiper-wrapper .carousel-cell {
+  line-height: 200px;
+  font-size: 80px;
+  text-align: center;
+  color: #FFF;
+}
+.carousel-main .swiper-wrapper .carousel-cell:before {
+  display: none;
+}
+.carousel-main .swiper-wrapper .carousel-cell.swiper-slide-active {
+  background: #ED2;
+}
+
+.carousel-nav .swiper-wrapper .carousel-cell {
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  color: #FFF;
+}
+.carousel-nav .swiper-wrapper .carousel-cell:before {
+  display: none;
+}
+.carousel-nav .swiper-wrapper .carousel-cell.swiper-slide-thumb-active {
+  background: #ED2;
+}
+
+.slider-container .carousel-cell {
+  text-align: center;
+  color: #FFF;
+}
+.slider-container .carousel-cell:before {
+  display: none;
+}
+.slider-container .carousel-cell.slick-current {
+  background: #ED2;
+}
+.slider-container .carousel-main .carousel-cell {
+  line-height: 200px;
+  font-size: 80px;
+}
+.slider-container .carousel-nav .carousel-cell {
+  font-size: 50px;
+  line-height: 80px;
+}
+.slider-container .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+}
+.slider-container .slick-prev {
+  left: 0;
+}
+.slider-container .slick-next {
+  right: 0;
+}

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+//==========================================================================
+//_tabs.scss
+//==========================================================================
+
+//---------------------------------------------------------------
+//.c-tab-content
+//---------------------------------------------------------------
+.c-tab-content {
+  > *:not(.is-active) {
+    display: none;
+  }
+}
+
+//---------------------------------------------------------------
+//.c-tab-btn
+//---------------------------------------------------------------
+.c-tab-btn {
+  &__items {
+    display: flex;
+  }
+  &__item {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ebf0f0;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #FFF;
+    transition: border-color 0.3s ease;
+    @include smMin {
+      height: 70px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      font-size: 1.8rem;
+    }
+    @include smMax {
+      font-size: 1.2rem;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      height: 35px;
+    }
+    &.is-active {
+      color: #FFF;
+      cursor: default;
+      pointer-events: none;
+      background-color: $colorMain;
+      border-color: $colorMain;
+    }
+    @include hover {
+      border-color: $colorMain;
+    }
+  }
+  &.c-tab-btn--col2 {
+    .c-tab-btn__item {
+      @include smMin {
+        width: calc(33.33% - 2px);
+        margin-right: 4px;
+      }
+      @include smMax {
+        width: 50%;
+      }
+    }
+  }
+  &.c-tab-btn--col3 {
+    .c-tab-btn__items {
+      @include smMin {
+        margin-left: -2px;
+        margin-right: -2px;
+      }
+      @include smMax {
+      }
+    }
+    .c-tab-btn__item {
+      @include smMin {
+        width: calc(33.33% - 2px);
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      @include smMax {
+        width: 33.33%;
+      }
+    }
+  }
+}

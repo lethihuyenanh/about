@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+//==========================================================================
+//_btn.scss
+//==========================================================================
+
+
+//-----------------------------------------------------------------
+//.c-btns
+//-----------------------------------------------------------------
+.c-btns {
+  display: flex;
+  justify-content: center;
+  * {
+    & + * {
+      margin-left: 30px;
+      @include mdMax {
+        margin-left: 20px;
+      }
+      @include smMax {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-btn-center
+//-----------------------------------------------------------------
+.c-btn-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//-----------------------------------------------------------------
+//.c-btn-01
+//-----------------------------------------------------------------
+.c-btn-01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid $colorMain;
+  font-family: $font-en;
+  font-weight: 700;
+  max-width: 300px;
+  padding: 0 40px;
+  font-size: 1.5rem;
+  color: $colorMain;
+  background: #FFF;
+  text-decoration: none;
+  &__txt {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  &__ico {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+  }
+  @include hover {
+    color: #fff;
+    background: $colorMain;
+    .c-btn-01__ico {
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+  &--sm {
+    max-width: 150px;
+    height: 40px;
+    padding: 0 15px;
+  }
+  &--back {
+    .c-btn-01__ico {
+      right: inherit;
+      left: 14px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+    @include hover {
+      .c-btn-01__ico {
+        left: 11px;
+      }
+    }
+  }
+  &--anker {
+    .c-btn-01__ico {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+  &--blank {
+    .c-btn-01__ico {
+      height: 10px;
+    }
+  }
+}
+
+
+
+
+
+
+

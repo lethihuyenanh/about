@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+//==========================================================================
+//_header.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.l-header
+//-----------------------------------------------------------------
+
+.l-header {
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mdMax {
+      height: 60px;
+      background: #fff;
+      z-index: 8500;
+      position: relative;
+    }
+  }
+  &__bg {
+    @include mdMin {
+      display: none;
+    }
+    @include mdMax {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 8000;
+      background: rgba(0, 0, 0 , 0.7);
+      visibility: hidden;
+      &.is-open {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.l-header-logo {
+  @include mdMin {
+    width: 45px;
+  }
+  @include mdMax {
+    width: 45px;
+  }
+   &__link {
+    display: block;
+  }
+}
+
+.l-header-menu {
+  @include mdMin {
+    display: none;
+  }
+  @include mdMax {
+    color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    z-index: 9001;
+    background: $colorMain;
+    outline: none;
+    span {
+      display: block;
+      background: #fff;
+      width: 24px;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      margin: -1px 0 0 -12px;
+      top: 50%;
+      transition: background-color 100ms;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        background: #fff;
+        width: 24px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        transition: transform 200ms, top 200ms;
+      }
+      &:before {
+        top: -8px;
+        transform: rotate(0deg);
+      }
+      &:after {
+        top: 8px;
+        transform: rotate(0deg);
+      }
+    }
+    &.is-open {
+      span {
+        background: $colorMain;
+        &:before,
+        &:after {
+          top: 0;
+        }
+        &:before {
+          transform: rotate(225deg)
+        }
+        &:after {
+          transform: rotate(-225deg)
+        }
+      }
+    }
+  }
+}
+
+.l-header-nav {
+  @include mdMin {
+    display: block;
+  }
+  @include mdMax {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    max-width: 320px;
+    min-width: 320px;
+    height: calc(100% - 60px);
+    background: #fff;
+    top: 60px;
+    right: 0;
+    z-index: 9000;
+    transform: translateX(100%);
+    @include transition;
+  }
+  &__inner {
+    @include mdMax {
+      position: relative;
+      height: 100%;
+      overflow: auto;
+      padding: 0 0 60px;
+    }
+  }
+  &__items {
+    @include mdMin {
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    @include mdMax {
+      border-top: 1px solid $colorBorder;
+    }
+  }
+  &__item {
+    @include mdMin {
+      position: relative;
+    }
+    @include mdMax {
+      border-bottom: 1px solid $colorBorder;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    @include mdMin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      font-size: 1.6rem;
+      padding: 0 13px;
+    }
+    @include mdMax {
+      display: block;
+      padding: 15px 15px;
+      background-color: rgba($blue-100, 0.5);
+    }
+    @include hover {
+      background: $colorMain;
+      color: #fff;
+    }
+  }
+  .l-header-nav__item.is-drop-nav-active {
+    @include mdMin {
+      .l-header-nav__link {
+        background: $colorMain;
+        color: #fff;
+      }
+    }
+  }
+  &.is-open {
+    @include mdMax {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+}
+
+.l-header-nav-drop {
+  text-align: left;
+  @include mdMin {
+    width: 100%;
+    min-width: 250px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    color: #fff;
+    padding: 10px 0;
+    display: none;
+    background: rgba($colorMain, 0.85);
+  }
+  @include mdMax {
+    padding: 10px 0 20px 30px;
+  }
+  &__inner {
+    @include mdMin {
+      position: relative;
+    }
+    @include mdMax {
+      padding: 0;
+    }
+  }
+  &__items {
+    @include mdMin {
+      // display: flex;
+      // justify-content: space-between;
+      // border-left: 1px solid $colorBorder;
+    }
+  }
+  &__item {
+    @include mdMin {
+      width: 100%;
+      border-top: 1px solid $colorBorder;
+      white-space: nowrap;
+      &:first-child {
+        border-top: 0;
+      }
+      // border-right: 1px  solid $colorBorder;
+    }
+    &:nth-child(n + 2) {
+      @include mdMax {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    @include mdMin {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      height: 50px;
+    }
+    @include hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.is-drop-nav-active {
+   @include mdMin {
+    .l-header-nav-drop {
+      display: block;
+      .is-view-tab & {
+        display: none;
+      }
+    }
+  }
+}
+
+.component .l-header-nav__item--component .l-header-nav__link,
+.effect .l-header-nav__item--effect .l-header-nav__link,
+.slider .l-header-nav__item--slider .l-header-nav__link,
+.modal .l-header-nav__item--modal .l-header-nav__link,
+.upload .l-header-nav__item--upload .l-header-nav__link {
+  background: $colorMain;
+  color: #fff;
+}

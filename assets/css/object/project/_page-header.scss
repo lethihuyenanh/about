@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+//==========================================================================
+//_page-header.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.p-page-header
+//-----------------------------------------------------------------
+.p-page-header {
+  background-color: #999;
+  color: #fff;
+  &__inner {
+    position: relative;
+  }
+  &__breadcrumb {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    @include smMax {
+      display: none;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    @include smMin {
+      height: 300px;
+    }
+    @include smMax {
+      height: 150px;
+    }
+  }
+  &__ttl {
+    font-weight: 700;
+    @include smMin {
+      font-size: 5rem;
+    }
+    @include smMax {
+      font-size: 3rem;
+    }
+  }
+}
+
+
+

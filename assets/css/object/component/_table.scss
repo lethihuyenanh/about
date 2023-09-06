@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+//==========================================================================
+//_table.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-table-01
+//-----------------------------------------------------------------
+.c-table-01 {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-top: 1px solid $colorBorder;
+  }
+  th,
+  td {
+    border-bottom: 1px solid $colorBorder;
+    padding: 20px;
+    @include smMax {
+      padding: 15px;
+    }
+  }
+  th {
+    width: 200px;
+    vertical-align: middle;
+    background-color: $blue-100;
+    font-weight: 700;
+    text-align: left;
+    // color: #fff;
+    @include smMax {
+      width: 120px;
+    }
+  }
+}

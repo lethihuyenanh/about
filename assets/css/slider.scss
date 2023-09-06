@@ -1,0 +1,133 @@
+
+//---------------------------------
+// carousel
+//---------------------------------
+.carousel {
+  background: #FAFAFA;
+  margin-bottom: 40px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 200px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.carousel-nav .carousel-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}
+
+/* flickity-fade */
+.carousel-main {
+  .flickity-slider {
+    transform: translate(0,0) !important;
+    .carousel-cell {
+      z-index: 0;
+      left: 0 !important;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 0.3s, transform 0.3s;
+      &.is-selected {
+        background: #ED2;
+        z-index: 1;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+/* swiper-fade */
+.carousel-main {
+  .swiper-wrapper {
+    .carousel-cell {
+      line-height: 200px;
+      font-size: 80px;
+      text-align: center;
+      color: #FFF;
+      &:before {
+        display: none;
+      }
+      &.swiper-slide-active {
+        background: #ED2;
+      }
+    }
+  }
+}
+.carousel-nav {
+  .swiper-wrapper {
+    .carousel-cell {
+      font-size: 50px;
+      line-height: 80px;
+      text-align: center;
+      color: #FFF;
+      &:before {
+        display: none;
+      }
+      &.swiper-slide-thumb-active {
+        background: #ED2;
+      }
+    }
+  }
+}
+
+.slider-container {
+  .carousel-cell {
+    text-align: center;
+    color: #FFF;
+    &:before {
+      display: none;
+    }
+    &.slick-current {
+      background: #ED2;
+    }
+  }
+  .carousel-main {
+    .carousel-cell {
+      line-height: 200px;
+      font-size: 80px;
+    }
+  }
+  .carousel-nav {
+    .carousel-cell {
+      font-size: 50px;
+      line-height: 80px;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 50;
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+}

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+//==========================================================================
+//_tag.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-tag
+//-----------------------------------------------------------------
+.c-tag {
+  display: inline-block;
+  min-width: 120px;
+  padding: 3px 10px;
+  font-size: 1.2rem;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+  &--01 {
+    background-color: $colorMain;
+  }
+}
+
+.c-tag-01 {
+  display: inline-block;
+  min-width: 120px;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  background-color: $colorGray02;
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  @include transition;
+  @include hover {
+    opacity: 0.7;
+  }
+  &.is-current {
+    background-color: $colorMain;
+    color: #FFF;
+  }
+}

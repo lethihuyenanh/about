@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+//==========================================================================
+//_base.scss
+//==========================================================================
+
+html {
+  font-size: 10px;
+  @include xsMax {
+    @include rem(1);
+  }
+}
+body {
+  width: 100%;
+  color: $colorPlain;
+  font-family: $font-ja;
+  font-size: 1.4rem;
+  font-weight: 400;
+  &.is-preload * {
+    transition: none !important;
+  }
+  &.is-locked {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+  @include smMax {
+    min-width: 320px;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  line-break: strict;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  @include transition;
+  img,
+  i {
+    @include transition;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+ifrrame {
+  vertical-align: bottom;
+}
+.hover-alpha a:hover img {
+  opacity: 0.7;
+}
+::-webkit-input-placeholder {
+  color: #ccc;
+  padding-top: 0.2em;
+}
+:-moz-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #ccc;
+}
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  //outline: none;
+  border-radius: 0;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  font-family: $font-ja;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=text],
+input[type=email],
+input[type="number"],
+input[type=tel] {
+  width: 100%;
+  border: 1px solid $colorBorder;
+  background: #fff;
+  padding: 0 15px;
+  box-sizing: border-box;
+  height: 44px;
+  line-height: 44px;
+  font-size: 1.6rem;
+}
+select {
+  cursor: pointer;
+  width: 100%;
+  padding: 0 40px 0 15px;
+  border: 1px solid $colorBorder;
+  background: #fff;
+  height: 44px;
+  font-size: 1.6rem;
+}
+select::-ms-expand {
+  display: none;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  line-height: 1.5;
+  border: 1px solid $colorBorder;
+  background: #fff;
+  font-size: 1.6rem;
+  padding: 15px;
+  font: inherit;
+}
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  line-height: 1;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+@include smMax {
+  select,
+  textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"] {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+
+
+

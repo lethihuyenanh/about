@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+//==========================================================================
+//_txt.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-txt-01
+//-----------------------------------------------------------------
+.c-txt-01 {
+  > * + * {
+    margin-top: 1em;
+  }
+}
+
+
+//-----------------------------------------------------------------
+//.c-txt-02
+//-----------------------------------------------------------------
+.c-txt-02 {
+  font-size: 1.6rem;
+  line-height: 2;
+  text-align: center;
+  @include mdMax {
+    font-size: 1.4rem;
+  }
+  @include smMax {
+    text-align: left;
+  }
+  > * + * {
+    margin-top: 1em;
+  }
+}
+
+
+//-----------------------------------------------------------------
+//.c-link-01
+//-----------------------------------------------------------------
+.c-link-01 {
+  color: $colorMain;
+  text-decoration: underline;
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+
+//-----------------------------------------------------------------
+//.c-source-box
+//-----------------------------------------------------------------
+.c-source-box {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  strong {
+    width: 6rem;
+    flex: 0 0 6rem;
+    font-weight: 700;
+  }
+  a {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    border: 1px solid $colorGray01;
+    border-radius: 5px;
+    min-height: 45px;
+    padding: 0.2em 10px;
+    background-color: rgba($blue-100, 0.5);
+    align-items: center;
+    color: $colorMain;
+    width: calc(100% - 6rem);
+    &[target="_blank"] {
+      padding-right: 60px;
+      &::before {
+        content: '';
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        background-color: $blue-200;
+        border-radius: 0 5px 5px 0;
+        @include transition;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 11'%3E%3Cpath fill-rule='evenodd' d='M3.000,11.000 L3.000,8.000 L-0.000,8.000 L-0.000,-0.000 L8.000,-0.000 L8.000,3.000 L11.000,3.000 L11.000,11.000 L3.000,11.000 ZM7.000,1.000 L3.000,1.000 L1.000,1.000 L1.000,7.000 L3.000,7.000 L3.000,3.000 L7.000,3.000 L7.000,1.000 ZM7.000,4.000 L4.000,4.000 L4.000,7.000 L7.000,7.000 L7.000,4.000 ZM10.000,8.000 L10.000,4.000 L8.000,4.000 L8.000,8.000 L4.000,8.000 L4.000,10.000 L10.000,10.000 L10.000,8.000 Z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 11px 11px;
+        background-position: center;
+      }
+    }
+    @include hover {
+      background-color: $blue-100;
+    }
+
+  }
+}
+
+.c-area-code {
+  margin-top: 10px;
+  border: 1px solid $colorGray01;
+  background-color: rgba($blue-100, 0.5);
+  padding: 15px;
+  &__label {
+    font-weight: 700;
+  }
+  textarea {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    outline: none;
+    background-color: rgba($colorGray01, 0.5);
+    border: 1px solid $blue-200;
+    border-radius: 5px;
+    padding: 0.5em 10px;
+    resize: auto;
+    font-size: 1.4rem;
+  }
+  .textarea-lg {
+    height: 200px;
+    overflow: auto;
+    resize: none;
+  }
+}

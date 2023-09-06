@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<!--HEAD START-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Frontend Demo Sources</title>
+<meta name="description" content="【SITE DESCRIPTION】">
+<meta name="keywords" content="【SITE KEYWORDS】">
+<link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+<link rel="canonical" href="【SITE URL(full path)】">
+<!--OGP-->
+<meta property="og:title" content="【SITE TITLE】">
+<meta property="og:type" content="website">
+<meta property="og:description" content="【SITE DESCRIPTION】">
+<meta property="og:url" content="【SITE URL(full path)】">
+<meta property="og:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+
+<script src="./assets/include/css.js"></script>
+
+<!-- Customs -->
+
+<!--HEAD END-->
+</head>
+<body>
+<!--BODY START-->
+<div class="l-page component">
+
+  <script src="./assets/include/header.js"></script>
+
+  <main class="l-main">
+
+    <div class="l-container l-container--gray">
+      <div class="l-inner">
+
+        <section class="top-sect">
+          <h1 class="c-ttl-01 u-ta-c">Dropdown menu</h1>
+          <div>
+            <p class="c-source-box"><strong>CSS:</strong><a href="./assets/css/object/component/_dropdown.scss" target="_blank" rel="noopener">./assets/css/object/component/_dropdown.scss</a></p>
+            <p class="c-source-box"><strong>JS:</strong><a href="./assets/js/dropdown.js" target="_blank" rel="noopener">./assets/js/dropdown.js</a></p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="l-container">
+      <div class="l-inner">
+
+        <section>
+          <h2 class="c-ttl-02">View my demo</h2>
+
+          <div class="c-card-01 c-card-01--col3">
+            <div class="c-card-01__items">
+              <div class="c-card-01__item">
+
+                <div class="c-dropdown js-dropdown">
+                  <div class="c-dropdown__ttl js-dropdown-toggler">年代から選ぶ</div>
+                  <div class="c-dropdown__body js-dropdown-body">
+                    <ul>
+                      <li><span class="c-dropdown__item c-dropdown__placeholder is-current">年代から選ぶ</span></li>
+                      <li><a class="c-dropdown__item js-dropdown-item" href="?year=2023">2023年</a></li>
+                      <li><a class="c-dropdown__item js-dropdown-item" href="?year=2022">2022年</a></li>
+                      <li><a class="c-dropdown__item js-dropdown-item" href="?year=2021">2021年</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.c-dropdown -->
+
+              </div>
+              <div class="c-card-01__item">
+
+                <div class="c-dropdown js-dropdown">
+                  <div class="c-dropdown__ttl js-dropdown-toggler">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="u-w-20px u-mr-5 u-va-m">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                    </svg>Select Chart
+                  </div>
+                  <div class="c-dropdown__body js-dropdown-body">
+                    <ul>
+                      <li><span class="c-dropdown__item js-dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="u-w-20px u-mr-5 u-va-m">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                        </svg>Chart Bar
+                      </span></li>
+                      <li><span class="c-dropdown__item js-dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="u-w-20px u-mr-5 u-va-m">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                        </svg>Chart Pie
+                      </span></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.c-dropdown -->
+
+              </div>
+
+              <div class="c-card-01__item">
+
+                <div class="c-dropdown js-dropdown">
+                  <div class="c-dropdown__ttl js-dropdown-toggler">Select Food</div>
+                  <div class="c-dropdown__body js-dropdown-body">
+                    <ul>
+                      <li><span class="c-dropdown__item c-dropdown__placeholder is-current">Select Food</span></li>
+                      <li><span class="c-dropdown__item js-dropdown-item">Candy</span></li>
+                      <li><span class="c-dropdown__item js-dropdown-item">Cake</span></li>
+                      <li><span class="c-dropdown__item js-dropdown-item">Milk</span></li>
+                      <li><span class="c-dropdown__item js-dropdown-item">Beer</span></li>
+                      <li><span class="c-dropdown__item js-dropdown-item">Juice</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.c-dropdown -->
+
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- /.top-sect -->
+
+      </div>
+    </div>
+    <!-- /.l-container -->
+
+  </main>
+  <!-- /.l-main -->
+
+  <script src="./assets/include/footer.js"></script>
+
+</div>
+<!-- /.l-page -->
+
+<!--BODY END-->
+</body>
+</html>

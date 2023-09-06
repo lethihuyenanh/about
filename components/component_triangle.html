@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<!--HEAD START-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Frontend Demo Sources</title>
+<meta name="description" content="【SITE DESCRIPTION】">
+<meta name="keywords" content="【SITE KEYWORDS】">
+<link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+<link rel="canonical" href="【SITE URL(full path)】">
+<!--OGP-->
+<meta property="og:title" content="【SITE TITLE】">
+<meta property="og:type" content="website">
+<meta property="og:description" content="【SITE DESCRIPTION】">
+<meta property="og:url" content="【SITE URL(full path)】">
+<meta property="og:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+
+<script src="./assets/include/css.js"></script>
+<script src="https://unpkg.com/vue@next" defer></script>
+<script src="./assets/js/app_triangle.js" defer></script>
+
+<!-- Customs -->
+
+<!--HEAD END-->
+</head>
+<body>
+<!--BODY START-->
+<div class="l-page component">
+
+  <script src="./assets/include/header.js"></script>
+
+  <main class="l-main">
+
+    <div class="l-container l-container--gray">
+      <div class="l-inner">
+
+        <section class="top-sect c-sect-xl">
+          <h1 class="c-ttl-01 u-ta-c">Triangle</h1>
+          <p class="c-lead-01">Demo Triangle that is coded by CSS</p>
+          <p class="c-source-box"><strong>CSS:</strong><a href="./assets/css/object/component/_triangle.scss" target="_blank" rel="noopener">./assets/css/object/component/_triangle.scss</a></p>
+        </section>
+        <!-- /.top-sect -->
+      </div>
+    </div>
+
+    <div class="l-container">
+      <div class="l-inner">
+
+        <section class="c-sect-xl c-sect-lg c-sect-md">
+          <h2 class="c-ttl-02 u-mb-sm">Equilateral Triangle (Tam giác đều)</h2>
+          <div class="c-card-01 c-card-01--col4">
+            <div class="c-card-01__items">
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--top</p>
+                <div class="mybox01"><i class="c-triangle--top"></i></div>
+              </div>
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--right</p>
+                <div class="mybox01"><i class="c-triangle--right"></i></div>
+              </div>
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--bottom</p>
+                <div class="mybox01"><i class="c-triangle--bottom"></i></div>
+              </div>
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--left</p>
+                <div class="mybox01"><i class="c-triangle--left"></i></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="c-sect-lg c-sect-md">
+          <h2 class="c-ttl-02 u-mb-sm">Right Triangle (Tam giác Vuông)</h2>
+          <div class="c-card-01 c-card-01--col4">
+            <div class="c-card-01__items">
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--top-left</p>
+                <div class="mybox01"><i class="c-triangle--top-left"></i></div>
+              </div>
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--top-right</p>
+                <div class="mybox01"><i class="c-triangle--top-right"></i></div>
+              </div>
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--bottom-left</p>
+                <div class="mybox01"><i class="c-triangle--bottom-left"></i></div>
+              </div>
+              <div class="c-card-01__item">
+                <p class="u-ta-c">.c-triangle--bottom-right</p>
+                <div class="mybox01"><i class="c-triangle--bottom-right"></i></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="c-sect-lg c-sect-md u-pb-lg">
+          <h2 class="c-ttl-02 u-mb-md">Creaty Triangle by yourself <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="u-w-20px"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" /></svg></h2>
+
+          <div class="c-media-01" id="app_triangle">
+            <div class="c-media-01__img">
+              <section class="c-sect-sm">
+                <h3 class="c-ttl-03">1. Input the width, height size:</h3>
+                <div class="u-mt-20">
+                  <div class="u-flex u-items-center">
+                    <div class="u-w-20">Width:</div>
+                    <div class="u-w-50"><input type="number" value="10" ref="userWidth" @change="changeWidth"></div>
+                    <div class="u-w-10 u-ta-c">px</div>
+                  </div>
+                  <div class="u-flex u-items-center u-mt-10">
+                    <div class="u-w-20">Height:</div>
+                    <div class="u-w-50"><input type="number" value="10" ref="userHeight" @change="changeHeight"></div>
+                    <div class="u-w-10 u-ta-c">px</div>
+                  </div>
+                </div>
+              </section>
+              <section class="c-sect-sm">
+                <h3 class="c-ttl-03">2. Select a Triangle's type:</h3>
+                <br><br><br>
+                <div class="mybox02 u-flex u-justify-center u-items-center u-ta-c">
+                  <div :class="'is-' + angleTypeSelected">
+                    <i class="c-triangle--top" @click="angleSelected('top')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--right" @click="angleSelected('right')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--bottom" @click="angleSelected('bottom')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--left" @click="angleSelected('left')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--top-left" @click="angleSelected('top-left')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--top-right" @click="angleSelected('top-right')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--bottom-left" @click="angleSelected('bottom-left')"><i class="c-ico-check"></i></i>
+                    <i class="c-triangle--bottom-right" @click="angleSelected('bottom-right')"><i class="c-ico-check"></i></i>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="#ffc107" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="u-w-40"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" /></svg>
+                      <br>Pick an Arrow
+                    </span>
+                  </div>
+                </div>
+                <br><br>
+              </section>
+            </div>
+            <div class="c-media-01__body">
+              <div class="myboxResult c-area-code">
+                <p class="c-area-code__lbl">CSS generated:</p>
+                <div class="p-clipboard js-clipboard">
+                  <div class="p-clipboard__inner">
+                    <textarea class="p-clipboard__target" id="cssSource" type="text" readonly="" rows="15">{{message}}</textarea>
+                    <!-- <span class="p-clipboard__view js-clipboard-view" readonly=""></span> -->
+                    <button class="p-clipboard__btn" @click="copyValue" title="Copy"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg></button>
+                    <span class="p-clipboard__tooltip" id="copyTooltip" v-show="isTooltip">Copied!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    <!-- /.l-container -->
+
+  </main>
+  <!-- /.l-main -->
+
+  <script src="./assets/include/footer.js"></script>
+
+</div>
+<!-- /.l-page -->
+
+<!--BODY END-->
+</body>
+</html>

@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+//==========================================================================
+//_news-list.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.p-news-list
+//-----------------------------------------------------------------
+.p-news-list {
+  &__items {
+    border-top: 1px solid $colorBorder;
+    @include smMax {
+      
+    }
+  }
+  &__item {
+    border-bottom: 1px solid $colorBorder;
+  }
+  &__link {
+    position: relative;
+    @include smMin {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px 40px 20px 15px;
+    }
+    @include smMax {
+      display: block;
+      padding: 20px 25px 20px 0;
+    }
+    @include hover {
+      background: $colorBorder;
+    }
+  }
+  &__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include smMin {
+      width: 250px;
+    }
+    @include smMax {
+      margin-bottom: 10px;
+    }
+  }
+  &__time {
+    display: inline-block;
+    color: #999;
+    font-size: 1.4rem;
+    width: 100px;
+  }
+  &__tag {
+    max-width: 120px;
+  }
+  &__txt {
+    @include smMin {
+      width: calc(100% - 250px);
+    }
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    @include smMin {
+      right: 15px;
+    }
+    @include smMax {
+      right: 5px;
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+
+//---------------------------------
+// p-video
+//---------------------------------
+.p-video {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	&__inner {
+		display: block;
+	}
+	.icon-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+	}
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+//==========================================================================
+//_card.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-card-01
+//-----------------------------------------------------------------
+.c-card-01 {
+  .c-card-01__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -30px -15px 0;
+  }
+  .c-card-01__item {
+    width: 100%;
+    margin: 30px 15px 0;
+  }
+  &.c-card-01--col2 {
+    .c-card-01__item {
+      @include smMin {
+        width: calc((100% / 2) - 30px);
+      }
+    }
+  }
+  &.c-card-01--col3 {
+    .c-card-01__item {
+      @include smMin {
+        width: calc((100% / 3) - 30px);
+      }
+    }
+  }
+  &.c-card-01--col4 {
+    .c-card-01__item {
+      @include smMin {
+        width: calc((100% / 2) - 30px);
+      }
+      @include mdMin {
+        width: calc((100% / 4) - 30px);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+// @use "sass:math";
+
+@mixin triangle ($width: 10rem, $height: 10rem, $color: #000, $direction: top) {
+  $half-width: ($width / 2);
+  $half-height: ($height / 2);
+
+  // $half-width: math.div($width, 2);
+  // $half-height: math.div($height, 2);
+
+  font-size: 0;
+  line-height: 0;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+
+  @if $direction == top {
+    border-width: 0 $half-width $height $half-width;
+    border-color: transparent transparent $color transparent;
+
+  } @else if $direction == right {
+    border-width: $half-height 0 $half-height $width;
+    border-color: transparent transparent transparent $color;
+
+  } @else if $direction == bottom {
+    border-width: $height $half-width 0 $half-width;
+    border-color: $color transparent transparent transparent;
+
+  } @else if $direction == left {
+    border-width: $half-height $width $half-height 0;
+    border-color: transparent $color transparent transparent;
+
+  } @else if $direction == top-left {
+    border-width: $height $width 0 0;
+    border-color: $color transparent transparent transparent;
+
+  } @else if $direction == top-right {
+    border-width: 0 $width $height 0;
+    border-color: transparent $color transparent transparent;
+
+  } @else if $direction == bottom-left {
+    border-width: $height 0 0 $width;
+    border-color: transparent transparent transparent $color;
+
+  } @else if $direction == bottom-right {
+    border-width: 0 0 $height $width;
+    border-color: transparent transparent $color transparent;
+
+  } @else {
+    // @error "Unknown direction #{$direction}.";
+  }
+}
+
+//==========================================================================
+//_triangle.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-triangle
+//-----------------------------------------------------------------
+
+// @include triangle ($width, $height, $color, $direction)
+.c-triangle {
+  &--top {
+    @include triangle(10rem, 5rem, $blue-200, top);
+  }
+  &--right {
+    @include triangle(5rem, 10rem, $blue-300, right);
+  }
+  &--bottom {
+    @include triangle(10rem, 5rem, $blue-400, bottom);
+  }
+  &--left {
+    @include triangle(5rem, 10rem, $blue-500, left);
+  }
+  &--top-left {
+    @include triangle(10rem, 10rem, $blue-600, top-left);
+  }
+  &--top-right {
+    @include triangle(10rem, 10rem, $blue-700, top-right);
+  }
+  &--bottom-left {
+    @include triangle(10rem, 10rem, $blue-800, bottom-left);
+  }
+  &--bottom-right {
+    @include triangle(10rem, 10rem, $blue-900, bottom-right);
+  }
+}
+

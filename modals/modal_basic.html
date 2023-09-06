@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<!--HEAD START-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Frontend Demo Sources</title>
+<meta name="description" content="【SITE DESCRIPTION】">
+<meta name="keywords" content="【SITE KEYWORDS】">
+<link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+<link rel="canonical" href="【SITE URL(full path)】">
+<!--OGP-->
+<meta property="og:title" content="【SITE TITLE】">
+<meta property="og:type" content="website">
+<meta property="og:description" content="【SITE DESCRIPTION】">
+<meta property="og:url" content="【SITE URL(full path)】">
+<meta property="og:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+
+<script src="./assets/include/css.js"></script>
+
+<!-- Customs -->
+
+<!--HEAD END-->
+</head>
+<body>
+<!--BODY START-->
+<div class="l-page modal">
+  
+  <script src="./assets/include/header.js"></script>
+  
+  <main class="l-main">
+
+    <div class="l-container l-container--gray">
+      <div class="l-inner">
+        <h1 class="c-ttl-01 u-ta-c">Modal Basic</h1>
+
+        <div class="u-mt-sm">
+          <p class="c-source-box"><strong>CSS:</strong><a href="./assets/css/object/component/_modal.scss" target="_blank" rel="noopener">./assets/css/object/component/_modal.scss</a></p>
+          <p class="c-source-box"><strong>JS:</strong><a href="./assets/js/modal.js" target="_blank" rel="noopener">./assets/js/modal.js</a></p>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="l-container">
+      <div class="l-inner">
+        
+        <section class="top-sect">
+
+          <div class="top-sect-cont">
+
+            <section class="c-sect-md">
+              <h2 class="c-ttl-02 u-mb-md">View my demo</h2>
+              <a class="c-link-01 js-modal-trigger" href="#modal01">Click to open Modal01</a>
+              <br><br>
+              <a class="c-link-01 js-modal-trigger" href="#modal02">Click to open Modal02</a>
+            </section>
+
+          </div>
+        </section>
+        <!-- /.top-sect -->
+        
+      </div>
+    </div>
+    <!-- /.l-container -->
+
+    <div id="modal01" class="c-modal js-modal">
+      <div class="c-modal__wrap">
+        <div class="c-modal__inner">
+          <div class="c-modal__content">
+            <div class="c-modal__contentTop">
+              <h2 class="u-ta-c">Modal01</h2>
+              <hr>
+            </div>
+            <div class="c-modal__contentBody">
+              dummy dummy <br>dummy dummy
+            </div>
+            <div class="c-modal__contentBottom u-ta-c">
+              <hr>
+              <a href="javascript:void(0)" class="js-modal-close">✕ CLOSE</a>
+            </div>
+            <div class="c-modal__close js-modal-close"><i></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-modal__bg"></div>
+    </div>
+
+    <div id="modal02" class="c-modal js-modal">
+      <div class="c-modal__wrap">
+        <div class="c-modal__inner">
+          <div class="c-modal__content">
+            <div class="c-modal__contentTop">
+              <h2 class="u-ta-c">Modal02</h2>
+              <hr>
+            </div>
+            <div class="c-modal__contentBody">
+              dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy <br>dummy dummy
+            </div>
+            <div class="c-modal__contentBottom u-ta-c">
+              <hr>
+              <a href="javascript:void(0)" class="js-modal-close">✕ CLOSE</a>
+            </div>
+            <div class="c-modal__close js-modal-close"><i></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-modal__bg"></div>
+    </div>
+    
+  </main>
+  <!-- /.l-main -->
+  
+  <script src="./assets/include/footer.js"></script>
+  
+</div>
+<!-- /.l-page -->
+
+<!--BODY END-->
+</body>
+</html>

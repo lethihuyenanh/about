@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<!--HEAD START-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Frontend Demo Sources</title>
+<meta name="description" content="【SITE DESCRIPTION】">
+<meta name="keywords" content="【SITE KEYWORDS】">
+<link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+<link rel="canonical" href="【SITE URL(full path)】">
+<!--OGP-->
+<meta property="og:title" content="【SITE TITLE】">
+<meta property="og:type" content="website">
+<meta property="og:description" content="【SITE DESCRIPTION】">
+<meta property="og:url" content="【SITE URL(full path)】">
+<meta property="og:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+
+<script src="./assets/include/css.js"></script>
+
+<!-- Customs -->
+<script src="./assets/vendor/jquery-numerator.js" defer></script>
+<script src="./assets/js/countup.js" defer></script>
+
+<!--HEAD END-->
+</head>
+<body>
+<!--BODY START-->
+<div class="l-page effect animation">
+  
+  <script src="./assets/include/header.js"></script>
+  
+  <main class="l-main">
+    
+    <div class="l-container l-container--gray">
+      <div class="l-inner">
+        
+        <section class="top-sect">
+          <h1 class="c-ttl-01 u-ta-c">Basic Animations</h1>
+          <div>
+            <p class="c-source-box"><strong>JS:</strong><a href="./assets/js/animation.js" target="_blank" rel="noopener">./assets/js/animation.js</a></p>
+          </div>
+        </section>
+        <!-- /.top-sect -->
+
+      </div>
+    </div>
+
+    <div class="l-container">
+      <div class="l-inner">
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Change images</h2>
+          <figure class="u-w-70 u-mx-auto"><img class="js-change-figures" data-num="2" src="./assets/images/animation_01.jpg" alt=""></figure>
+          <br><br>
+          <figure class="u-w-40 u-mx-auto"><img class="js-change-figures" data-num="5" src="./assets/images/img01.jpg" alt=""></figure>
+        </section>
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Fade In</h2>
+          <div class="c-txt-01 js-animate is-fadeIn">
+            <figure class="u-w-70 u-mx-auto"><img src="./assets/images/video_thumb_01.jpg" alt=""></figure>
+          </div>
+        </section>
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Fade Up</h2>
+          <div class="c-txt-01 js-animate is-fadeUp">
+            <figure class="u-w-70 u-mx-auto"><img src="./assets/images/video_thumb_01.jpg" alt=""></figure>
+          </div>
+        </section>
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Text FadeUp with subs</h2>
+          <div class="u-ta-c c-txt-01 js-animate is-animate is-fadeUpCtn">
+            <p class="u-fz-40 u-c-main u-ff-en u-fw-700 is-fadeUpSub01">LAICHI HCMc</p>
+            <p class="u-fz-16  u-fw-700 is-fadeUpSub02">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+            <p class="u-fz-14 is-fadeUpSub03"><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</i></p>
+          </div>
+        </section>
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Fade Left</h2>
+          <div class="c-txt-01 js-animate is-fadeLeft">
+            <figure class="u-w-70 u-mx-auto"><img src="./assets/images/video_thumb_01.jpg" alt=""></figure>
+          </div>
+        </section>
+
+        <section class="c-sect-xl u-ta-r">
+          <h2 class="c-ttl-02">Fade Right</h2>
+          <div class="c-txt-01 js-animate is-fadeRight">
+            <figure class="u-w-70 u-mx-auto"><img src="./assets/images/video_thumb_01.jpg" alt=""></figure>
+          </div>
+        </section>
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Texts Spite Left</h2>
+          <div class="c-txt-01">
+            <p class="u-fz-40 u-c-main u-ff-en u-fw-700"><span class="is-split-left js-split-txt js-animate">2022 TITLE</span></p>
+          </div>
+        </section>
+
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-02">Texts Spite Up</h2>
+          <div class="c-txt-01">
+            <p class="u-fz-40 u-c-main u-ff-en u-fw-700"><span class="is-split-up js-split-txt js-animate">LAICHI HCMc</span></p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    <!-- /.l-container -->
+
+    <div class="l-container l-container--gray">
+      <div class="l-inner">
+        <section class="c-sect-xl">
+          <h2 class="c-ttl-01 u-ta-c">Count Up with scroll animation</h2>
+          <p>Referential: <small><a class="c-link-01" href="https://www.lightchemical.co.jp/recruit/corporate/infographics.html" target="_blank" rel="noopener"><i>https://www.lightchemical.co.jp/recruit/corporate/infographics.html</i></a></small></p>
+          <div>
+            <p class="c-source-box"><strong>JS:</strong><a href="./assets/vendor/jquery-numerator.js" target="_blank" rel="noopener">./assets/vendor/jquery-numerator.js</a></p>
+            <p class="c-source-box"><strong></strong><a href="./assets/js/countup.js" target="_blank" rel="noopener">./assets/js/countup.js</a></p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- /.l-container -->
+
+    <div class="l-container">
+      <div class="l-inner">
+
+        <div class="c-card-01 c-card-01--col2 u-fw-700 u-ta-r u-c-main u-fz-600p">
+          <div class="c-card-01__items">
+            <div class="c-card-01__item">
+              <p class="u-bg-gray01 u-bd u-bd-main u-p-50"><b class="js-count-num" data-num="5">0</b><span class="u-fz-20 js-count-unit">%</span></p>
+            </div>
+            <div class="c-card-01__item">
+              <p class="u-bg-gray01 u-bd u-bd-main u-p-50"><b class="js-count-num" data-num="26">0</b><span class="u-fz-20 js-count-unit">%</span></p>
+            </div>
+            <div class="c-card-01__item">
+              <p class="u-bg-gray01 u-bd u-bd-main u-p-50"><b class="js-count-num" data-num="75.5">0</b><span class="u-fz-20 js-count-unit">%</span></p>
+            </div>
+            <div class="c-card-01__item">
+              <p class="u-bg-gray01 u-bd u-bd-main u-p-50"><b class="js-count-num" data-num="100">0</b><span class="u-fz-20 js-count-unit">%</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /.l-container -->
+    
+  </main>
+  <!-- /.l-main -->
+  
+  <script src="./assets/include/footer.js"></script>
+  
+</div>
+<!-- /.l-page -->
+
+<!--BODY END-->
+</body>
+</html>

@@ -1,0 +1,90 @@
+@import "foundation/_setting.scss";
+
+//.sidebar-wrapper
+//--------------------------
+.sidebar-wrapper {
+  position: relative;
+
+  &__side {
+    position: absolute;
+    top: -80px;
+    @include smMax {
+      .text-en span {
+        display: none;
+      }
+    }
+  }
+  &__main {
+  }
+  &__cont {
+    padding-left: 250px;
+    @media screen and ($mdMin) and ($lgMax) {
+      padding-left: 200px;
+    }
+    @include mdMax {
+      padding-left: 120px;
+    }
+    @include smMax {
+      padding-left: 50px;
+    }
+  }
+}
+
+//.sidebar-step
+//----------------
+.sidebar-step {
+  &__nav {
+    position: absolute;
+    top: 60px;
+    left: calc(50vw - 600px);
+    transition: opacity 0.3s ease-out;
+    @media screen and (max-width: 1240px) {
+      left: 20px;
+    }
+    &.is-fixed {
+      position: fixed;
+    }
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &__items {
+    padding-top: 15px;
+  }
+  &__item {}
+  &__link {
+    display: block;
+    white-space: nowrap;
+    padding: 6px 0 7px;
+    .text-en {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      min-width: 90px;
+      transition: 0.3s;
+      @include mdMax {
+        font-size: 1.2rem;
+      }
+      strong {
+        font-size: 130%;
+      }
+    }
+    @include hover {
+      color: $colorMain;
+    }
+    &.is-active {
+      color: $colorMain;
+      padding: 4px 0;
+      .text-en {
+        font-size: 1.8rem;
+        font-weight: 600;
+        @include mdMax {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

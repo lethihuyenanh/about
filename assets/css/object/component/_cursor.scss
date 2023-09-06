@@ -1,0 +1,25 @@
+
+//.c-drag-stalker
+//----------------------------
+.c-drag-stalker {
+  background: none;
+  width: 80px;
+  height: 84px;
+  left: 0;
+  top: 0;
+  margin-top: -60px;
+  margin-left: -60px;
+  position: fixed;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.1s linear, opacity 0.8s linear;
+  background: url($img-path + 'logo.svg') no-repeat center / 100%;
+  &._active {
+    opacity:1;
+  }
+}
+
+
+.is-view-pc .cursor .text-sp { display: none; }
+.is-view-sp .cursor .text-pc { display: none; }

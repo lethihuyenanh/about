@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+//==========================================================================
+//_ratio.scss
+//==========================================================================
+.c-ratio {
+  position: relative;
+  width: 100%;
+}
+.c-ratio::before {
+  display: block;
+  content: "";
+}
+.c-ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c-ratio-1x1::before {
+  padding-top: 100%;
+}
+
+.c-ratio-4x3::before {
+  padding-top: 75%;
+}
+
+.c-ratio-16x9::before {
+  padding-top: 56.25%;
+}
+
+.c-ratio-21x9::before {
+  padding-top: 42.8571428571%;
+}

@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+//==========================================================================
+//_ico.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.c-ico
+//-----------------------------------------------------------------
+@mixin ico-base {
+  display: inline-block;
+  svg {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ico-arrow-01
+//-----------------------------------------------------------------
+.c-ico-arrow-01 {
+  @include ico-base;
+  width: 8px;
+  height: 16px;
+  svg {
+    width: 8px;
+    height: 16px;
+    fill: $colorMain;
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ico-blank-01
+//-----------------------------------------------------------------
+.c-ico-blank-01 {
+  svg {
+    width: 10px;
+    height: 10px;
+    fill: $colorMain;
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ico-plus
+//-----------------------------------------------------------------
+.c-ico-plus-01 {
+  @include ico-base;
+  @include smMin {
+    width: 25px;
+    height: 25px;
+  }
+  @include smMax {
+    width: 15px;
+    height: 15px;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    content: "";
+    background: $colorMain;
+    width: 100%;
+    height: 1px;
+    @include transition;
+  }
+  &:after {
+    transform: rotate(90deg);
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ico-close
+//-----------------------------------------------------------------
+.c-ico-close-01 {
+  @include ico-base;
+  width: 16px;
+  height: 2px;
+  position: relative;
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $colorMain;
+  }
+  &:before {
+    transform: rotateZ(45deg);
+  }
+  &:after {
+    transform: rotateZ(-45deg);
+  }
+}
+
+//-----------------------------------------------------------------
+//.c-ico-reverse
+//-----------------------------------------------------------------
+.c-ico-reverse {
+  transform: rotateY(180deg);
+}
+
+//-----------------------------------------------------------------
+//.c-ico-white
+//-----------------------------------------------------------------
+.c-ico-white {
+  svg {
+    fill: #fff;
+  }
+}
+
+
+//-----------------------------------------------------------------
+//.c-ico-play-01
+//-----------------------------------------------------------------
+.c-ico-play-01 {
+  @include ico-base;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 68px;
+  height: 48px;
+  margin-left: -34px;
+  margin-top: -24px;
+  -webkit-transition: opacity .25s cubic-bezier(0,0,0.2,1);
+  transition: opacity .25s cubic-bezier(0,0,0.2,1);
+  z-index: 64;
+  svg {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    fill: #212121;
+    fill-opacity: .8;
+    transition: fill .1s cubic-bezier(0.4,0,1,1),fill-opacity .1s cubic-bezier(0.4,0,1,1);
+  }
+}
+
+
+//-----------------------------------------------------------------
+//.c-ico-check
+//-----------------------------------------------------------------
+.c-ico-check {
+  @include ico-base;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='3' stroke='red' class='u-w-20px'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4.5 12.75l6 6 9-13.5' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}

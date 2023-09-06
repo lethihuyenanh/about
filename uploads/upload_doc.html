@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<!--HEAD START-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Frontend Demo Sources</title>
+<meta name="description" content="【SITE DESCRIPTION】">
+<meta name="keywords" content="【SITE KEYWORDS】">
+<link rel="apple-touch-icon-precomposed" href="./apple-touch-icon.png">
+<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico">
+<link rel="canonical" href="【SITE URL(full path)】">
+<!--OGP-->
+<meta property="og:title" content="【SITE TITLE】">
+<meta property="og:type" content="website">
+<meta property="og:description" content="【SITE DESCRIPTION】">
+<meta property="og:url" content="【SITE URL(full path)】">
+<meta property="og:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="【SITE URL(full path)】/assets/images/ogp.png">
+
+<script src="./assets/include/css.js"></script>
+
+<!-- Customs -->
+<script src="./assets/js/uploadFiles.js" defer></script>
+
+<!--HEAD END-->
+</head>
+<body>
+<!--BODY START-->
+<div class="l-page upload">
+  
+  <script src="./assets/include/header.js"></script>
+  
+  <main class="l-main">
+
+    <div class="l-container l-container--gray">
+      <div class="l-inner">
+        <h1 class="c-ttl-01 u-ta-c">Upload Documents</h1>
+
+        <div class="u-mt-sm">
+          <p class="c-source-box"><strong>CSS:</strong><a href="./assets/css/object/project/_file-upload.scss" target="_blank" rel="noopener">./assets/css/object/project/_file-upload.scss</a></p>
+          <p class="c-source-box"><strong>JS:</strong><a href="./assets/js/uploadFiles.js" target="_blank" rel="noopener">./assets/js/uploadFiles.js</a></p>
+        </div>
+
+      </div>
+    </div>
+    
+    <div class="l-container">
+      <div class="l-inner">
+        
+        <section class="top-sect">
+          <p class="c-lead-01 u-fw-700 u-ta-c u-mb-md">※pdf, xlsx, xls, doc, docx</p>
+
+          <div class="top-sect-cont">
+          
+            <form>
+
+              <div class="p-form-table">
+                <dl class="p-form-table__item is-error">
+                  <dt class="p-form-table__head">Upload Documents<span class="p-form-table__required">※</span></dt>
+                  <dd class="p-form-table__body">
+                    <div class="p-form-table__body-inner">
+                      <div class="file-field file-field--doc">
+                        <ul id="fileList">
+
+                        <script type="text/template" id="fileListTemplate">
+                          <li class="file-field__info">
+                            <span class="file-field__fileicon"></span>
+                            <div class="file-field__filename">
+                              <span class="file-field__filetext"></span>
+                              <span class="file-field__filesize"></span>
+                            </div>
+                            <span class="file-field__remove"></span>
+                            <input type="hidden" class="file_hash" name="file_hash[]" value="">
+                          </li>
+                        </script>
+
+                        </ul>
+                        <label class="file-field__label" tabindex="-1">
+                          <span class="file-field__message">Select File</span>
+                          <script type="text/template" id="fileElemTemplate">
+                            <input id="fileElem" class="file-field__input js-form-field" type="file" name="cvFiles[]" multiple="true" data-field="cvFiles" accept=".pdf,.xls,.xlsx,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-label="Select File">
+                          </script>
+                        </label>
+                      </div>
+
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </form>
+
+
+          </div>
+
+        </section>
+        <!-- /.top-sect -->
+        
+      </div>
+    </div>
+    <!-- /.l-container -->
+    
+  </main>
+  <!-- /.l-main -->
+  
+  <script src="./assets/include/footer.js"></script>
+  
+</div>
+<!-- /.l-page -->
+
+<!--BODY END-->
+</body>
+</html>

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+//==========================================================================
+//_l-footer.scss
+//==========================================================================
+
+//-----------------------------------------------------------------
+//.l-footer
+//-----------------------------------------------------------------
+
+.l-footer {
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  background: $colorMain;
+  padding: 20px;
+  margin-top: auto;
+}
+.l-footer-pagetop {
+  display: block;
+  position: absolute;
+  position: absolute;
+  bottom: 100%;
+  right: 15px;
+  margin-bottom: 15px;
+  z-index: 1000;
+  outline: none;
+  cursor: pointer;
+  &__trriger {
+     background: $colorMain;
+    width: 40px;
+    height: 40px;
+  }
+  &__txt {
+    display: inline-block;
+    text-indent: -9999em;
+  }
+  &__ico {
+    transform: translate(-50%, -50%) rotateZ(-90deg);
+    width: 13px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    svg {
+      width: 13px;
+      height: 26px;
+    }
+  }
+  &.is-fixed {
+    position: fixed;
+    bottom: 0;
+  }
+}
+.l-footer-copyright {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+

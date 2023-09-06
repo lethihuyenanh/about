@@ -1,0 +1,24 @@
+
+//---------------------------------
+// p-cookie
+//---------------------------------
+.p-cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $yellow-300;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  transition: transform 0.5s ease;
+  transform: translate3d(0, 100%, 0);
+  z-index: 9999;
+  &__btn {
+    margin-top: 1rem;
+  }
+  .is-cookie & {
+    transform: translate3d(0, 0, 0);
+  }
+}
