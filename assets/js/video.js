@@ -1,6 +1,6 @@
 
 //---------------------------------------------------------
-// player01
+// player01 https://youtu.be/nPx7s1sWqvs?si=6yCpOND4hMNNh0do
 //---------------------------------------------------------
 // 1. This code loads the IFrame Player API code asynchronously.
 var tag01 = document.createElement('script');
@@ -15,7 +15,7 @@ var player01;
 
 
 //---------------------------------------------------------
-// player02
+// player02 https://www.youtube.com/watch?v=8BIPT46Rn34
 //---------------------------------------------------------
 // 1. This code loads the IFrame Player API code asynchronously.
 var tag02 = document.createElement('script');
@@ -40,7 +40,7 @@ function onYouTubeIframeAPIReady() {
       modestbranding: 1,
       vq: 'hd1080'
     },
-    videoId: 'FRNARnIIpoU',
+    videoId: 'nPx7s1sWqvs',
     events: {
       'onReady': onPlayerReady01,
       'onStateChange': onPlayerStateChange01
@@ -58,7 +58,7 @@ function onYouTubeIframeAPIReady() {
       modestbranding: 1,
       vq: 'hd1080'
     },
-    videoId: 'K4TOrB7at0Y',
+    videoId: '8BIPT46Rn34',
     events: {
       'onReady': onPlayerReady02,
       'onStateChange': onPlayerStateChange02

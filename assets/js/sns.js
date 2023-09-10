@@ -2,7 +2,7 @@
 // sns
 // --------------------------------------------------------------------
 var url = 'https://melon-at-home.business.site/',
-string = '※テキストテキストテキストテキストテキストテキストテキストテキストテキスト。3,400※テキストテキストテキストテキストテキストテキストテキストテキストテキスト。♪2022年03月17日（月）9時59分まで';
+string = 'Text text text. Text text text. Text text text. Text text text. Text text text. Text text text.';
 
 function setTweet(TGT) {
   var setURL = "https://twitter.com/share?";
@@ -40,8 +40,8 @@ function setTweetSearch(TGT) {
 //hashtag 
 //------------------------------------
 function setTweettag(TGT) { 
-  var _string = '※テキストテキストテキストテキストテキストテキストテキストテキストテキスト。3,400※テキストテキストテキストテキストテキストテキストテキストテキストテキスト。 #frontend #テキスト ♪2022年03月17日（月）9時59分まで';
-  var _hashtag = "frontend #backend #テキスト"
+  var _string = 'Text text text. Text text text. Text text text. Text text text. Text text text. Text text text. #frontend #webpack #wordpress #aboutme #huyenanhfe';
+  var _hashtag = "frontend #backend #huyenanhfe"
   var setURL = "https://twitter.com/share?";
   setURL += "text="+encodeURIComponent(_string)+"%0A";
   setURL += "&url="+url+"%0A";

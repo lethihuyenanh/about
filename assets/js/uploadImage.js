@@ -8,7 +8,7 @@ $(function(){
       $fileField = $('.file-field__label');
 
   /**
-   * 初期化関連
+   * upload again
    */
   $(document).on('change', '#fileElem', handleFiles);
 
@@ -19,7 +19,7 @@ $(function(){
   $fileField.append($fileElemTemplate.text());
 
   /**
-   * イベント系
+   * create thumbnail
    */
   function handleFiles() {
     try{
@@ -32,10 +32,10 @@ $(function(){
         find_img.remove();
       }
 
-      // 指定の拡張子以外の場合はアラート
+      //
       var permit_type = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp'];
       if (fileprop && permit_type.indexOf(fileprop.type) == -1) {
-        alert('この形式のファイルはアップロードできません');
+        alert('There are some errors.');
         $(this).val('');
         return
       }
