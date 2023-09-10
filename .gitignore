@@ -19,4 +19,5 @@ _notes
 *.bak
 node_modules/
 !.gitkeep
+*.catch
 
