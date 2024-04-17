@@ -74,7 +74,7 @@ html {
 body {
   width: 100%;
   color: #000;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
 }
@@ -166,7 +166,7 @@ button {
   border: none;
   background: none;
   font-size: 1.6rem;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 input[type=number] {
@@ -234,11 +234,11 @@ button {
 
 @media screen and (max-width:767.98px) {
   select,
-textarea,
-input[type=text],
-input[type=email],
-input[type=number],
-input[type=tel] {
+  textarea,
+  input[type=text],
+  input[type=email],
+  input[type=number],
+  input[type=tel] {
     font-size: 1.6rem;
   }
 }
@@ -286,7 +286,7 @@ input[type=tel] {
   cursor: pointer;
   position: relative;
   border: 1px solid #084298;
-  font-family: Arial;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   max-width: 300px;
   padding: 0 40px;
@@ -1112,7 +1112,7 @@ input[type=tel] {
 }
 @media screen and (max-width:767.98px) {
   .c-table-01 th,
-.c-table-01 td {
+  .c-table-01 td {
     padding: 15px;
   }
 }
@@ -1409,7 +1409,7 @@ input[type=tel] {
   transition: opacity 0.8s linear, -webkit-transform 0.1s linear;
   transition: transform 0.1s linear, opacity 0.8s linear;
   transition: transform 0.1s linear, opacity 0.8s linear, -webkit-transform 0.1s linear;
-  background: url("../images/logo.svg") no-repeat center/100%;
+  background: url("/assets/images/logo.svg") no-repeat center/100%;
 }
 .c-drag-stalker._active {
   opacity: 1;
@@ -1703,7 +1703,7 @@ input[type=tel] {
 }
 @media screen and (max-width:767.98px) {
   .p-form-step ul li:after,
-.p-form-step ul li div:after {
+  .p-form-step ul li div:after {
     border-width: 25px;
     border-right-width: 0;
     border-left-width: 10px;
@@ -2484,8 +2484,8 @@ input[type=tel] {
 }
 
 .file-field__label:focus-within {
-  -webkit-box-shadow: 0 0 0 2px hsla(0deg, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
-          box-shadow: 0 0 0 2px hsla(0deg, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
+  -webkit-box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
+          box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
   outline: none;
 }
 
@@ -2571,8 +2571,8 @@ input[type=tel] {
   text-align: center;
 }
 .file-field__remove:hover, .file-field__remove:focus {
-  -webkit-box-shadow: 0 0 0 2px hsla(0deg, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
-          box-shadow: 0 0 0 2px hsla(0deg, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
+  -webkit-box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
+          box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.85), 0 0 0 4px rgba(154, 180, 210, 0.9);
   outline: none;
 }
 
@@ -2811,11 +2811,11 @@ input[type=tel] {
 }
 
 .u-ff-jp {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .u-ff-en {
-  font-family: Arial;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .u-fz-40 {
@@ -4095,18 +4095,42 @@ input[type=tel] {
   }
 }
 
+.l-header-logo__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.l-header-logo__link img {
+  display: block;
+}
 @media print, screen and (min-width:1025px) {
-  .l-header-logo {
+  .l-header-logo__link img {
     width: 45px;
   }
 }
 @media screen and (max-width:1024.98px) {
-  .l-header-logo {
+  .l-header-logo__link img {
     width: 45px;
   }
 }
-.l-header-logo__link {
+.l-header-logo__link span {
   display: block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  margin-left: 0.5em;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-bottom: 0.25em;
+  -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@media print, screen and (min-width:768px) {
+  .is-view-pc .l-header-logo__link:hover span {
+    color: #ff6347;
+  }
 }
 
 @media print, screen and (min-width:1025px) {
@@ -4370,11 +4394,10 @@ input[type=tel] {
 }
 
 .l-footer {
-  color: #fff;
   line-height: 1;
   position: relative;
   text-align: center;
-  background: #084298;
+  background: linear-gradient(45deg, #ff6347 0%, #47ff63 50%, #6347ff 100%);
   padding: 20px;
   margin-top: auto;
 }

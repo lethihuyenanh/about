@@ -48,14 +48,33 @@
 }
 
 .l-header-logo {
-  @include mdMin {
-    width: 45px;
-  }
-  @include mdMax {
-    width: 45px;
-  }
-   &__link {
-    display: block;
+  &__link {
+    display: flex;
+    align-items: flex-end;
+    img {
+      display: block;
+      @include mdMin {
+        width: 45px;
+      }
+      @include mdMax {
+        width: 45px;
+      }
+    }
+    span {
+      display: block;
+      font-family: $font-en;
+      font-weight: 700;
+      margin-left: 0.5em;
+      font-size: 1.6rem;
+      line-height: 1;
+      padding-bottom: 0.25em;
+      @include transition;
+    }
+    @include hover {
+      span {
+        color: $color-tomato-base;
+      }
+    }
   }
 }
 

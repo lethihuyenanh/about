@@ -33,11 +33,11 @@ $smDesignW: 750;
 $mdDesignW: $md;
 
 //font
-$font-ja: 'Noto Sans JP', sans-serif;
-$font-en: Arial;
+$font-ja: 'Roboto', sans-serif;
+$font-en: 'Roboto Condensed', sans-serif;
 
 // image path
-$img-path: '../images/';
+$img-path: '/assets/images/';
 
 $blue: #0d6efd;
 $blue-100: #cfe2ff;
@@ -228,6 +228,20 @@ $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
 
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin multiLine($n) {
+  display: -webkit-box;
+  -webkit-line-clamp: $n;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 // IEハック
 @mixin hackIE11() {// IE11以上
   @at-root _:-ms-fullscreen,:root & {
@@ -288,9 +302,58 @@ $easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   opacity: 0;
   transform: translateX(-30px);
 }
+
 @mixin animated-fadeInRight($duration, $delay) {
   opacity: 1;
   transform: translateX(0);
   transition-duration: $duration;
   transition-delay: $delay;
+}
+// Tomato colors
+// Triadic Colors of #ff6347
+$color-tomato-base: #ff6347;
+$color-tomato-triadic-01: #47ff63;
+$color-tomato-triadic-02: #6347ff;
+
+// Analogous Colors of #ff6347
+// $color-tomato-base: #ff6347;
+$color-tomato-analogous-01: #ffbf47;
+$color-tomato-analogous-02: #ff4787;
+
+// Complementary Color
+// $color-tomato-base: #ff6347;
+$color-tomato-complementary: #47e3ff;
+
+// Monochromatic Colors of #ff6347
+// $color-tomato-base: #fa2600;
+$color-tomato-mono-01: #ff3814;
+$color-tomato-mono-02: #ff4d2e;
+$color-tomato-mono-03: #ff6347;
+$color-tomato-mono-04: #ff7961;
+$color-tomato-mono-05: #ff8e7a;
+$color-tomato-mono-06: #ffa494;
+
+//Blue colors
+// Triadic Colors of #0048ba
+// #0048ba #ba0048 #48ba00
+
+// Analogous Colors of #0048ba
+// #0048ba #1500ba #00a5ba
+
+// Complementary Color
+// #0048ba #ba7200
+
+// Monochromatic Colors of #0048ba
+// #002a6e #003487 #003ea1 #0048ba #0052d4 #005ced #0767ff
+
+
+
+@mixin gradient01() {
+  background: linear-gradient(45deg, #{$color-tomato-base} 0%, #{$color-tomato-triadic-01} 50%, #{$color-tomato-triadic-02} 100%);
+}
+
+@mixin gradient02() {
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }

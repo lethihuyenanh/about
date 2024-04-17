@@ -2,7 +2,7 @@ var header = '' +
 ' \
   <header class="l-header js-menu-header">\
     <div class="l-header__inner l-inner">\
-      <div class="l-header-logo"><a class="l-header-logo__link" href="/"><img src="/assets/images/logo.svg" alt="About me." width="100" height="29" decoding="async"><span><strong>ABOUT ME</strong><small>Huyen Anh Frontend</small></span></a></div>\
+      <div class="l-header-logo"><a class="l-header-logo__link" href="/"><img src="/assets/images/logo.svg" alt="About me. &copy;huyen.anh.fe" width="100" height="29" decoding="async"><span>About me</span></a></div>\
       <button type="button" class="l-header-menu js-menu-trigger"><span>MENU</span></button>\
       <nav class="l-header-nav js-menu-target">\
         <div class="l-header-nav__inner">\

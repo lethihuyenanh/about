@@ -1,0 +1,19 @@
+@import "../foundation/_setting.scss";
+
+.top-mv {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: all;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include gradient02;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

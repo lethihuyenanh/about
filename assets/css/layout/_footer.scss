@@ -9,11 +9,12 @@
 //-----------------------------------------------------------------
 
 .l-footer {
-  color: #fff;
+  // color: #fff;
   line-height: 1;
   position: relative;
   text-align: center;
-  background: $colorMain;
+  // background: $colorMain;
+  @include gradient01;
   padding: 20px;
   margin-top: auto;
 }
